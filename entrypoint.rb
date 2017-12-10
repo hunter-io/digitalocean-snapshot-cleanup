@@ -29,7 +29,7 @@ begin
 
   # for each droplets, only keeps the newest "number_snapshots_to_keep" snapshots
   droplets.each do |droplet|
-    snapshots_to_delete = snapshots[droplet].size - number_snapshots_to_keep
+    snapshots_to_delete = snapshots[droplet].size - number_snapshots_to_keep.to_i
 
     # no snapshots to delete
     next if snapshots_to_delete <= 0
